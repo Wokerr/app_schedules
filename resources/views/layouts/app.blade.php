@@ -7,6 +7,8 @@
         @vite('resources/css/app.css')
     </head>
     <body class="bg-slate-100">
+        <svg>
+        </svg>
         <header>
             <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
                 <div class="container px-6 py-4 mx-auto">
@@ -37,11 +39,12 @@
             
                         <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                         <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:bg-transparent lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
-                            <div class="flex flex-col -mx-6 items-center lg:flex-row lg:items-center lg:mx-8">
-                                <a href="/about-me" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About me</a>
-                                <a href="calendar" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Calendar</a>
-                                <a href="payments" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Payments</a>
-                                <a href="/" class="px-3 py-2 mx-3 mt-2 text-gray-700 transition-colors duration-400 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Principal</a>
+                            <div class="flex flex-col -mx-6 items-center lg:flex-row lg:items-center lg:mx-3">
+                                <a href="/" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-400 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Principal</a>
+                                <a href="about-me" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About me</a>
+                                <a href="calendar" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Calendar</a>
+                                <a href="payments" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Payments</a>
+                                <a href="register" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Register</a>
                             </div>
 
                              {{-- This are login icon and responsive --}}
@@ -74,7 +77,7 @@
             @yield('content')
         </main>
 
-        <footer class="text-center p-5 text-neutral-400 font-bold uppercase">
+        <footer class="text-center p-5 text-neutral-400 font-bold uppercase mt-5">
             schedules app - todos los derechos reservados {{ now()->year }}
         </footer>
     </body>
