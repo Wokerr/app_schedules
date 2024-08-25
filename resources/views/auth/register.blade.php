@@ -10,15 +10,16 @@
 
 {{-- Principal div  --}}
 
-<div class="md:flex md:justify-center">
+<div class="md:flex md:justify-center md:items-center">
     <div class="md:w-4/12">
-        <p>imagen here</p>
+        <img src="{{ asset("calendar-concept-3d-illustration-icon-260nw-2152456191.webp") }}" alt="imagen to register usuario" class="rounded-xl">
     </div>
 
 {{-- Form for create a new worker  --}}
 
     <div class="md:w-4/12 bg-white p-6 rounded-xl">
-        <form action="">
+        <form action="{{route('register')}}" method="POST">
+            @csrf
             <div class="mb-5">
                 <label for="name" class="text-center p-1 block uppercase text-indigo-900 font-bold hover:underline underline-offset-2 cursor-pointer">
                     Name
@@ -54,6 +55,9 @@
                 </label>
                 <input type="password" id="password_confirmation" placeholder="" name="password_confirmation" class="border p-3 w-full rounded-lg h-10"> 
             </div>
+
+            <input type="submit" value="Create Account" class="bg-cyan-600 hover:bg-cyan-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg">
+
         </form>
     </div>
 </div>

@@ -7,8 +7,6 @@
         @vite('resources/css/app.css')
     </head>
     <body class="bg-slate-100">
-        <svg>
-        </svg>
         <header>
             <nav x-data="{ isOpen: false }" class="relative bg-white shadow dark:bg-gray-800">
                 <div class="container px-6 py-4 mx-auto">
@@ -44,7 +42,7 @@
                                 <a href="about-me" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">About me</a>
                                 <a href="calendar" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Calendar</a>
                                 <a href="payments" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Payments</a>
-                                <a href="register" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Register</a>
+                                <a href="{{ route('register') }}" class="px-2 py-2 mx-2 mt-1 text-gray-700 transition-colors duration-300 transform rounded-md lg:mt-0 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700">Register</a>
                             </div>
 
                              {{-- This are login icon and responsive --}}

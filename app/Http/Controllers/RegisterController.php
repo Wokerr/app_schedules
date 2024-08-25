@@ -9,6 +9,16 @@ class RegisterController extends Controller
     //
     public function index() 
     {
-        return view('principal');
+        return view('auth.register');
+    }
+    
+    public function store(Request $request) 
+    {
+        // dd($request);
+
+        $request->validate($request, [
+            'name' => 'required'
+        ]);
+
     }
 }
