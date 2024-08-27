@@ -24,7 +24,9 @@
                 <label for="name" class="text-center p-1 block uppercase text-indigo-900 font-bold hover:underline underline-offset-2 cursor-pointer">
                     Name
                 </label>
-                <input type="text" id="name" placeholder="Your name" name="name" class="border p-3 w-full rounded-lg h-10"> 
+                <input type="text" id="name" placeholder="Your name" name="name" value="{{ old('name') }}" class="border p-3 w-full rounded-lg h-10 @error('name') border-red-600 @enderror"> 
+
+                @error('name') <span class=" bg-red-500 text-center block text-white font-bold rounded-lg mt-3 p-2"> {{$message}} </span> @enderror
             </div>
 
             <div class="mb-5">

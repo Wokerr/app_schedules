@@ -16,8 +16,9 @@ class RegisterController extends Controller
     {
         // dd($request);
 
-        $request->validate($request, [
-            'name' => 'required'
+        $request->validate([
+            'name' => 'required|alpha|max:50',
+            'username' => 'required|alpha|max:10'
         ]);
 
     }
